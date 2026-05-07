@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio etudiant | Mon parcours et mes projets</title>
+    <meta
+      name="description"
+      content="Portfolio simple d'un etudiant : presentation, competences, projets et contact."
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#accueil" aria-label="Mon portfolio">
+        <span class="brand-mark">P</span>
+        <span>Mon Portfolio</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <a href="#profil">Profil</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="accueil">
+      <section class="hero">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80"
+          alt="Ordinateur portable utilise pour apprendre et travailler"
+        />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Etudiant curieux, motive, en progression</p>
+          <h1>Salut, je presente mon parcours et mes projets.</h1>
+          <p>
+            Je suis etudiant et j'apprends a construire des choses utiles avec le web,
+            la logique et un peu de creativite. Ce portfolio rassemble ce que je sais faire,
+            ce que j'apprends et ce que je veux developper.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projets">Voir mes projets</a>
+            <a class="button secondary" href="#contact">Me contacter</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro" aria-label="Points forts">
+        <div>
+          <strong>Etudiant</strong>
+          <span>en apprentissage constant</span>
+        </div>
+        <div>
+          <strong>Web</strong>
+          <span>HTML, CSS, JavaScript</span>
+        </div>
+        <div>
+          <strong>Objectif</strong>
+          <span>progresser par la pratique</span>
+        </div>
+      </section>
+
+      <section class="section" id="profil">
+        <div class="section-heading">
+          <p class="eyebrow">Profil</p>
+          <h2>Un portfolio simple pour montrer qui je suis.</h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon">01</span>
+            <h3>Qui je suis</h3>
+            <p>Je suis etudiant, curieux, serieux et motive par les projets concrets qui me font progresser.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">02</span>
+            <h3>Ce que j'apprends</h3>
+            <p>Je travaille les bases du developpement web, la presentation d'idees et la resolution de problemes.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">03</span>
+            <h3>Ce que je cherche</h3>
+            <p>Des stages, des projets, des collaborations et des occasions d'apprendre avec des personnes motivees.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="work-band" id="projets">
+        <div class="section-heading">
+          <p class="eyebrow">Projets</p>
+          <h2>Quelques exemples de choses que je peux presenter.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
+              alt="Code affiche sur un ecran"
+            />
+            <div>
+              <h3>Mini site web</h3>
+              <p>Une page simple construite avec HTML et CSS pour apprendre la structure d'un site.</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+              alt="Carnet, ordinateur et notes de travail"
+            />
+            <div>
+              <h3>Expose ou dossier</h3>
+              <p>Un travail scolaire organise avec recherche, synthese et presentation claire.</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+              alt="Etudiants travaillant ensemble"
+            />
+            <div>
+              <h3>Projet en groupe</h3>
+              <p>Une experience de collaboration pour apprendre a repartir les taches et avancer ensemble.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>Me contacter.</h2>
+          <p>
+            Tu peux utiliser cette partie pour mettre ton email, ton LinkedIn, ton GitHub ou un petit
+            message pour une demande de stage, de projet ou d'information.
+          </p>
+        </div>
+
+        <form class="contact-form">
+          <label>
+            Nom
+            <input type="text" name="name" placeholder="Ton nom" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="toi@email.com" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Bonjour, je souhaite echanger avec vous..."></textarea>
+          </label>
+          <button class="button primary" type="submit">Envoyer</button>
+          <p class="form-note" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Mon Portfolio</p>
+      <p>Portfolio etudiant simple cree avec Codex.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
