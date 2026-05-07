@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Photo de profil temporaire</title>
+  <desc id="desc">Illustration simple pour remplacer temporairement une photo personnelle.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="56" fill="url(#bg)"/>
+  <circle cx="320" cy="250" r="105" fill="#f7f7f2" opacity=".95"/>
+  <path d="M144 545c22-112 90-174 176-174s154 62 176 174" fill="#f7f7f2" opacity=".95"/>
+  <text x="320" y="582" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800" fill="#ffffff">DHYB</text>
+</svg>
