@@ -21,7 +21,34 @@ navLinks.forEach((link) => {
 });
 
 form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(form);
+  const submitButton = form.querySelector("button[type='submit']");
+
+  submitButton.disabled = true;
   formNote.textContent = "Envoi du message...";
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Erreur d'envoi");
+      }
+
+      form.reset();
+      formNote.textContent = "Merci, votre message a bien ete envoye.";
+    })
+    .catch(() => {
+      formNote.textContent = "L'envoi a echoue. Vous pouvez me contacter par email ou WhatsApp.";
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+    });
 });
 
 updateHeader();
