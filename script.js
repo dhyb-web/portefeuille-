@@ -21,9 +21,7 @@ navLinks.forEach((link) => {
 });
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  formNote.textContent = "Merci, ton message est pret. Il reste a connecter un vrai service d'envoi.";
-  form.reset();
+  formNote.textContent = "Envoi du message...";
 });
 
 updateHeader();

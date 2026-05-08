@@ -196,19 +196,20 @@
           <a class="text-link" href="https://wa.me/22896864882">WhatsApp</a>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" action="https://formspree.io/f/mvzlwzqb" method="POST">
           <label>
             Nom
-            <input type="text" name="name" placeholder="Ton nom" />
+            <input type="text" name="name" placeholder="Ton nom" required />
           </label>
           <label>
             Email
-            <input type="email" name="email" placeholder="toi@email.com" />
+            <input type="email" name="email" placeholder="toi@email.com" required />
           </label>
           <label>
             Message
-            <textarea name="message" rows="5" placeholder="Bonjour, je souhaite echanger avec vous..."></textarea>
+            <textarea name="message" rows="5" placeholder="Bonjour, je souhaite echanger avec vous..." required></textarea>
           </label>
+          <input type="hidden" name="_subject" value="Nouveau message depuis mon portfolio" />
           <button class="button primary" type="submit">Envoyer</button>
           <p class="form-note" role="status"></p>
         </form>
