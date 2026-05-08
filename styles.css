@@ -116,10 +116,10 @@ a {
 
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 86vh;
   display: grid;
   align-items: end;
-  padding: 130px clamp(18px, 5vw, 64px) 72px;
+  padding: 120px clamp(18px, 5vw, 64px) 60px;
   overflow: hidden;
 }
 
@@ -165,10 +165,10 @@ p {
 }
 
 h1 {
-  max-width: 12ch;
+  max-width: 16ch;
   margin-bottom: 22px;
-  font-size: clamp(3rem, 9vw, 6.7rem);
-  line-height: 0.94;
+  font-size: clamp(3rem, 6.8vw, 5.2rem);
+  line-height: 0.98;
   overflow-wrap: anywhere;
 }
 
