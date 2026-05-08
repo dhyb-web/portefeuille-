@@ -24,6 +24,7 @@ body {
   background: var(--paper);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 img {
@@ -168,6 +169,7 @@ h1 {
   margin-bottom: 22px;
   font-size: clamp(3rem, 9vw, 6.7rem);
   line-height: 0.94;
+  overflow-wrap: anywhere;
 }
 
 h2 {
@@ -175,6 +177,7 @@ h2 {
   margin-bottom: 0;
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 h3 {
@@ -503,8 +506,9 @@ textarea:focus {
   }
 
   .hero {
-    min-height: 88vh;
-    padding-top: 108px;
+    min-height: auto;
+    padding-top: 112px;
+    padding-bottom: 56px;
   }
 
   .hero-overlay {
@@ -512,8 +516,9 @@ textarea:focus {
   }
 
   h1 {
-    max-width: 10ch;
-    font-size: clamp(2.8rem, 15vw, 4.9rem);
+    max-width: 100%;
+    font-size: clamp(2rem, 8.5vw, 3.1rem);
+    line-height: 1;
   }
 
   .intro,
@@ -533,6 +538,114 @@ textarea:focus {
 }
 
 @media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .site-header {
+    padding: 12px 14px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand span:last-child {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .brand-mark {
+    flex: 0 0 auto;
+  }
+
+  .hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-content p:not(.eyebrow) {
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: clamp(1.45rem, 6.8vw, 2rem);
+    line-height: 1.08;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+  }
+
+  .eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .intro strong {
+    font-size: 1.35rem;
+  }
+
+  .intro div,
+  .service-card,
+  .project-card div,
+  .contact-form {
+    padding: 20px;
+  }
+
+  .profile-section {
+    gap: 14px;
+  }
+
+  .profile-card {
+    padding: 18px;
+  }
+
+  .profile-photo {
+    max-width: 190px;
+    margin: 0 auto;
+  }
+
+  .profile-details h2 {
+    font-size: clamp(1.45rem, 7vw, 2rem);
+    text-align: left;
+  }
+
+  .profile-details p:not(.eyebrow),
+  .service-card p,
+  .project-card p,
+  .contact-copy p {
+    font-size: 0.95rem;
+  }
+
+  .profile-tags span {
+    font-size: 0.76rem;
+    padding: 7px 9px;
+  }
+
+  .info-item {
+    padding: 18px;
+  }
+
+  .info-item span {
+    font-size: 0.72rem;
+  }
+
+  .info-item strong {
+    font-size: 0.9rem;
+  }
+
+  .contact-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .text-link {
+    display: flex;
+    width: fit-content;
+    margin-right: 0;
+  }
+
   .hero-actions,
   .button {
     width: 100%;
@@ -565,5 +678,29 @@ textarea:focus {
 
   .info-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  h2,
+  .profile-details h2 {
+    font-size: 1.35rem;
+  }
+
+  .button {
+    min-height: 44px;
+    font-size: 0.9rem;
+  }
+
+  .profile-photo {
+    max-width: 170px;
   }
 }
